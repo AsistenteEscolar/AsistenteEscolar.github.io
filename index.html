@@ -34,9 +34,37 @@
 </p>
 
 <h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
+<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Definimos cada modulo</h3>
+</p>Lista de Materias. Este módulo es el de mayor importancia para el funcionamiento del programa. El módulo Lista de Materias es encargado de cargar y guardar en la base de datos las materias creadas por el usuario y la información relevante a ellas.
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p> El módulo Lista de Materias abre la base de datos que almacena a los usuarios y sus materias creadas justo después de un inicio de sesión exitoso y antes de pasar  a mostrar el menú.  Carga las materias que se almacenan en la base de datos y permite que los módulos interactúen con ellos. 
+
+<p>Cuando accedemos al módulo de Lista de Materias, tendremos la opción de crear una materia. Esta opción pedirá al usuario los datos de la materia para después guardarlo en la base de datos como una materia que pertenece al usuario.
+</p>.
+
+<h3>
+<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a></h3>
+</p> Cada materia creada cuenta con ciertos datos. Los datos son separados en dos tipos: los que proporciona el usuario y los que proporciona el programa. Los datos que el usuario deberá proporcionar para cada materia son:
+<p> Nombre de materia.
+<p> Nombre de profesor/a.
+<p> Días en los que tiene que asistirse a la clase.
+<p> Hora inicial y hora final de la clase. 
+<p> Rúbrica de calificación.
+
+<p>Los datos que el programa proporcionará a cada materia: Calificación. Lista de actividades.
+
+<p> Inicio de Sesión. Este módulo se encarga de los usuarios y su acceso al programa. Desde aquí podemos iniciar la sesión de un usuario existente, crear un usuario nuevo y acceder usando su sesión nueva, o salir del programa.  
+
+<p> Abre internamente la base de datos y pide que el usuario ingrese su número de cuenta y contraseña. El módulo compara estos datos con los usuarios existentes almacenados en la base de datos y decide si el usuario entra al programa. Si el usuario y la contraseña es igual que los datos que le pertenece a algún usuario del programa, entonces este les permite acceder al resto del programa y muestra el módulo Menú. 
+</p>
+
+<h3>
+<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Menu</h3>
+</p> Este módulo será el encargado de llevar a cabo la navegación por el programa. Desde aquí elegimos una opción de nuestro menú
+
+<p> El menú se encargará de ir a cada módulo del programa, pedir su interfaz y después operar utilizando los métodos de ese módulo. La interfaz principal será un método del módulo menú, pero las interfaces de cada módulo serán impresas desde un método definido en el módulo. El menú recibirá las opciones que va eligiendo el usuario y ejecutará la interfaz  
+
+</p>
 
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creadores</h3>
@@ -46,6 +74,14 @@
   Edgardo Rubio</br>
   Mauricio Nieto</br>
 </p>
+
+
+
+<h3>
+<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
+
+<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+
 
 <h3>
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
